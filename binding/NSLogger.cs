@@ -28,23 +28,23 @@ namespace MonoTouch.NSLogger
 		}
 
 		[DllImport("__Internal", EntryPoint="LoggerStart")]
-		private static extern void Native_LoggerStart( IntPtr logger );
+		private static extern void LoggerStart( IntPtr logger );
 
 		public void Start()
 		{
-			Native_LoggerStart( logger );
+			LoggerStart( logger );
 		}
 
 		[DllImport("__Internal", EntryPoint="LoggerStop")]
-		private static extern void Native_LoggerStop( IntPtr logger );
+		private static extern void LoggerStop( IntPtr logger );
 
 		public void Stop()
 		{
-			Native_LoggerStop( logger );
+			LoggerStop( logger );
 		}
 
 		[DllImport("__Internal", EntryPoint="LoggerSetViewerHost")]
-		private static extern void Native_LoggerSetViewerHost( IntPtr logger, IntPtr host, int port );
+		private static extern void LoggerSetViewerHost( IntPtr logger, IntPtr host, int port );
 
 		public void SetViewerHost( string hostname, int port )
 		{
@@ -53,12 +53,12 @@ namespace MonoTouch.NSLogger
 			}
 
 			using (var ns_host = new NSString(hostname)) {
-				Native_LoggerSetViewerHost( logger, ns_host.Handle, port );
+				LoggerSetViewerHost( logger, ns_host.Handle, port );
 			}
 		}
 
 		[DllImport("__Internal", EntryPoint="LoggerSetupBonjour")]
-		private static extern void Native_LoggerSetupBonjour( IntPtr logger, IntPtr bonjourServiceType, IntPtr bonjourServiceName );
+		private static extern void LoggerSetupBonjour( IntPtr logger, IntPtr bonjourServiceType, IntPtr bonjourServiceName );
 
 		public void SetupBonjour( string bonjourServiceType, string bonjourServiceName )
 		{
@@ -78,21 +78,21 @@ namespace MonoTouch.NSLogger
 
 			using (ns_type) {
 				using (ns_name) {
-					Native_LoggerSetupBonjour( logger, ptr_type, ptr_name );
+					LoggerSetupBonjour( logger, ptr_type, ptr_name );
 				}
 			}
 		}
 
 		[DllImport("__Internal", EntryPoint="LoggerSetOptions")]
-		private static extern void Native_LoggerSetOptions( IntPtr logger, NSLoggerOptions options );
+		private static extern void LoggerSetOptions( IntPtr logger, NSLoggerOptions options );
 
 		public void SetViewerHost( NSLoggerOptions options )
 		{
-			Native_LoggerSetOptions( logger, options );
+			LoggerSetOptions( logger, options );
 		}
 
 		[DllImport("__Internal", EntryPoint="LogMessageTo")]
-		private static extern void Native_LogMessage( IntPtr logger, IntPtr tag, int level, IntPtr message );
+		private static extern void LogMessage( IntPtr logger, IntPtr tag, int level, IntPtr message );
 
 		public void Log( int level, string format, params object[] data )
 		{
@@ -117,13 +117,13 @@ namespace MonoTouch.NSLogger
 
 			using (ns_tag) {
 				using (ns_message) {
-					Native_LogMessage( logger, ptr_tag, level, ptr_message );
+					LogMessage( logger, ptr_tag, level, ptr_message );
 				}
 			}
 		}
 
 		[DllImport("__Internal", EntryPoint="LogDataTo")]
-		private static extern void Native_LogData( IntPtr logger, IntPtr tag, int level, IntPtr data );
+		private static extern void LogData( IntPtr logger, IntPtr tag, int level, IntPtr data );
 
 		public void Log( int level, NSData data )
 		{
@@ -144,12 +144,12 @@ namespace MonoTouch.NSLogger
 			}
 
 			using (ns_tag) {
-				Native_LogData( logger, ptr_tag, level, data.Handle );
+				LogData( logger, ptr_tag, level, data.Handle );
 			}
 		}
 
 		[DllImport("__Internal", EntryPoint="LogImageDataTo")]
-		private static extern void Native_LogImageData( IntPtr logger, IntPtr tag, int level, int width, int height, IntPtr image );
+		private static extern void LogImageData( IntPtr logger, IntPtr tag, int level, int width, int height, IntPtr image );
 
 		public void Log( int level, UIImage image )
 		{
@@ -171,13 +171,13 @@ namespace MonoTouch.NSLogger
 
 			using (ns_tag) {
 				using (var png = image.AsPNG()) {
-					Native_LogImageData( logger, ptr_tag, level, (int) image.Size.Width, (int) image.Size.Height, png.Handle );
+					LogImageData( logger, ptr_tag, level, (int) image.Size.Width, (int) image.Size.Height, png.Handle );
 				}
 			}
 		}
 
 		[DllImport("__Internal", EntryPoint="LogMarkerTo")]
-		private static extern void Native_LogMarker( IntPtr logger, IntPtr text );
+		private static extern void LogMarker( IntPtr logger, IntPtr text );
 
 		public void Marker( string text )
 		{
@@ -186,15 +186,15 @@ namespace MonoTouch.NSLogger
 			}
 
 			using (var ns_text = new NSString(text)) {
-				Native_LogMarker( logger, ns_text.Handle );
+				LogMarker( logger, ns_text.Handle );
 			}
 		}
 
 		[DllImport("__Internal", EntryPoint="LogStartBlockTo")]
-		private static extern void Native_LogStartBlock( IntPtr logger, IntPtr message );
+		private static extern void LogStartBlock( IntPtr logger, IntPtr message );
 
 		[DllImport("__Internal", EntryPoint="LogEndBlockTo")]
-		private static extern void Native_LogEndBlock( IntPtr logger );
+		private static extern void LogEndBlock( IntPtr logger );
 
 		public IDisposable StartBlock( string format, params object[] data )
 		{
@@ -206,7 +206,7 @@ namespace MonoTouch.NSLogger
 			IntPtr ptr_message = ns_message.Handle;
 
 			using (ns_message) {
-				Native_LogStartBlock( logger, ptr_message );
+				LogStartBlock( logger, ptr_message );
 			}
 			return new LoggerBlock( logger );
 		}
@@ -222,7 +222,7 @@ namespace MonoTouch.NSLogger
 
 			void IDisposable.Dispose()
 			{
-				Native_LogEndBlock( logger );
+				LogEndBlock( logger );
 			}
 		}
 	}
