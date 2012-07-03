@@ -43,7 +43,7 @@ namespace MonoTouch.NSLogger
 				LoggerSetDefaultLogger( ptr );
 			}
 			get {
-				return new NSLogger( LoggerGetDefaultLogger());
+				return new NSLogger( IntPtr.Zero );
 			}
 		}
 
