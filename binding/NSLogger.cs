@@ -22,9 +22,29 @@ namespace MonoTouch.NSLogger
 		[DllImport("__Internal")]
 		private static extern IntPtr LoggerInit();
 
-		public NSLogger()
+		public NSLogger() : this(LoggerInit())
 		{
-			logger = LoggerInit();
+		}
+
+		private NSLogger( IntPtr logger )
+		{
+			this.logger = logger;
+		}
+
+		[DllImport("__Internal")]
+		private static extern void LoggerSetDefaultLogger( IntPtr logger );
+		[DllImport("__Internal")]
+		private static extern IntPtr LoggerGetDefaultLogger();
+
+		public static NSLogger StandardLogger
+		{
+			set {
+				IntPtr ptr = value != null ? value.logger : IntPtr.Zero;
+				LoggerSetDefaultLogger( ptr );
+			}
+			get {
+				return new NSLogger( LoggerGetDefaultLogger());
+			}
 		}
 
 		[DllImport("__Internal", EntryPoint="LoggerStart")]
