@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73BE643515A1F523002AF857 /* LoggerClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 73BE643215A1F523002AF857 /* LoggerClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73BE643615A1F523002AF857 /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 73BE643315A1F523002AF857 /* LoggerClient.m */; };
+		73BE643715A1F523002AF857 /* LoggerCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 73BE643415A1F523002AF857 /* LoggerCommon.h */; };
+		73D0588015A1EC6000FA7ED8 /* nslogger-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 73D0587F15A1EC6000FA7ED8 /* nslogger-Prefix.pch */; };
+		73F8DA7D15A16BB100B4B2A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F8DA7C15A16BB100B4B2A5 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		73BE643215A1F523002AF857 /* LoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerClient.h; path = "Client Logger/iOS/LoggerClient.h"; sourceTree = "<group>"; };
+		73BE643315A1F523002AF857 /* LoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoggerClient.m; path = "Client Logger/iOS/LoggerClient.m"; sourceTree = "<group>"; };
+		73BE643415A1F523002AF857 /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = "Client Logger/iOS/LoggerCommon.h"; sourceTree = "<group>"; };
+		73D0587F15A1EC6000FA7ED8 /* nslogger-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "nslogger-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		73F8DA7915A16BB100B4B2A5 /* libnslogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnslogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		73F8DA7C15A16BB100B4B2A5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		73F8DAAF15A16D3200B4B2A5 /* libnslogger copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libnslogger copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73F8DA7615A16BB100B4B2A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73F8DA7D15A16BB100B4B2A5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73F8DA6E15A16BB100B4B2A5 = {
+			isa = PBXGroup;
+			children = (
+				73F8DA7E15A16BB100B4B2A5 /* nslogger */,
+				73F8DA7B15A16BB100B4B2A5 /* Frameworks */,
+				73F8DA7A15A16BB100B4B2A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73F8DA7A15A16BB100B4B2A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73F8DA7915A16BB100B4B2A5 /* libnslogger.a */,
+				73F8DAAF15A16D3200B4B2A5 /* libnslogger copy.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73F8DA7B15A16BB100B4B2A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73F8DA7C15A16BB100B4B2A5 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73F8DA7E15A16BB100B4B2A5 /* nslogger */ = {
+			isa = PBXGroup;
+			children = (
+				73BE643215A1F523002AF857 /* LoggerClient.h */,
+				73BE643315A1F523002AF857 /* LoggerClient.m */,
+				73BE643415A1F523002AF857 /* LoggerCommon.h */,
+				73F8DA7F15A16BB100B4B2A5 /* Supporting Files */,
+			);
+			path = nslogger;
+			sourceTree = "<group>";
+		};
+		73F8DA7F15A16BB100B4B2A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73D0587F15A1EC6000FA7ED8 /* nslogger-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		73F8DA7715A16BB100B4B2A5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BE643515A1F523002AF857 /* LoggerClient.h in Headers */,
+				73D0588015A1EC6000FA7ED8 /* nslogger-Prefix.pch in Headers */,
+				73BE643715A1F523002AF857 /* LoggerCommon.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		73F8DA7815A16BB100B4B2A5 /* nslogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73F8DA8615A16BB100B4B2A5 /* Build configuration list for PBXNativeTarget "nslogger" */;
+			buildPhases = (
+				73F8DA7515A16BB100B4B2A5 /* Sources */,
+				73F8DA7615A16BB100B4B2A5 /* Frameworks */,
+				73F8DA7715A16BB100B4B2A5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nslogger;
+			productName = nslogger;
+			productReference = 73F8DA7915A16BB100B4B2A5 /* libnslogger.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		73F8DAA415A16D3200B4B2A5 /* nslogger Universal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73F8DAAC15A16D3200B4B2A5 /* Build configuration list for PBXNativeTarget "nslogger Universal" */;
+			buildPhases = (
+				73F8DAB015A16D8A00B4B2A5 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "nslogger Universal";
+			productName = nslogger;
+			productReference = 73F8DAAF15A16D3200B4B2A5 /* libnslogger copy.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73F8DA7015A16BB100B4B2A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 73F8DA7315A16BB100B4B2A5 /* Build configuration list for PBXProject "nslogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 73F8DA6E15A16BB100B4B2A5;
+			productRefGroup = 73F8DA7A15A16BB100B4B2A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73F8DA7815A16BB100B4B2A5 /* nslogger */,
+				73F8DAA415A16D3200B4B2A5 /* nslogger Universal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73F8DAB015A16D8A00B4B2A5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LIB_NAME=${PROJECT_NAME}\nBUILD_DIR=build\n\n# Create paths\nINSTALL_DIR=${BUILD_DIR}/${LIB_NAME}\nDEVICE_DIR=${BUILD_DIR}/iphoneos-iphoneos\nSIMULATOR_DIR=${BUILD_DIR}/iphonesimulator-iphonesimulator\n\n\n# Build our project using iphoneos and iphonesimulator build configurations\nxcodebuild -configuration \"iphoneos\" -target \"${LIB_NAME}\" -sdk iphoneos\nxcodebuild -configuration \"iphonesimulator\" -target \"${LIB_NAME}\" -sdk iphonesimulator\n\n# Clean the old install directory.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\n# Create the install directory\nmkdir -p \"${INSTALL_DIR}\"\n\n# Copy the iphoneos headers into the install directory\ncp -R \"${DEVICE_DIR}/usr\" \"${INSTALL_DIR}\"\n\n# Use lipo tool to create 1 universal library\nlipo -create \"${DEVICE_DIR}/lib${LIB_NAME}.a\" \"${SIMULATOR_DIR}/lib${LIB_NAME}.a\" -output \"${INSTALL_DIR}/lib${LIB_NAME}.a\"\n\n# Delete iphoneos/iphonesimulator build directories + the .build directory\nrm -rf \"${DEVICE_DIR}\" \"${SIMULATOR_DIR}\" \"${INSTALL_DIR}.build\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73F8DA7515A16BB100B4B2A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BE643615A1F523002AF857 /* LoggerClient.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		73F8DA8415A16BB100B4B2A5 /* iphoneos */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = iphoneos;
+		};
+		73F8DA8515A16BB100B4B2A5 /* iphonesimulator */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = iphonesimulator;
+		};
+		73F8DA8715A16BB100B4B2A5 /* iphoneos */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/nslogger.dst;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nslogger-Prefix.pch";
+				OTHER_CFLAGS = "-fno-exceptions";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphoneos;
+			};
+			name = iphoneos;
+		};
+		73F8DA8815A16BB100B4B2A5 /* iphonesimulator */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/nslogger.dst;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nslogger-Prefix.pch";
+				OTHER_CFLAGS = "-fno-exceptions";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphonesimulator;
+				VALID_ARCHS = i386;
+			};
+			name = iphonesimulator;
+		};
+		73F8DAAD15A16D3200B4B2A5 /* iphoneos */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				DSTROOT = /tmp/nslogger.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nslogger-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "nslogger copy";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphoneos;
+			};
+			name = iphoneos;
+		};
+		73F8DAAE15A16D3200B4B2A5 /* iphonesimulator */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = i386;
+				DSTROOT = /tmp/nslogger.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nslogger-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "nslogger copy";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = iphonesimulator;
+				VALID_ARCHS = i386;
+			};
+			name = iphonesimulator;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73F8DA7315A16BB100B4B2A5 /* Build configuration list for PBXProject "nslogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73F8DA8415A16BB100B4B2A5 /* iphoneos */,
+				73F8DA8515A16BB100B4B2A5 /* iphonesimulator */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = iphoneos;
+		};
+		73F8DA8615A16BB100B4B2A5 /* Build configuration list for PBXNativeTarget "nslogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73F8DA8715A16BB100B4B2A5 /* iphoneos */,
+				73F8DA8815A16BB100B4B2A5 /* iphonesimulator */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = iphoneos;
+		};
+		73F8DAAC15A16D3200B4B2A5 /* Build configuration list for PBXNativeTarget "nslogger Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73F8DAAD15A16D3200B4B2A5 /* iphoneos */,
+				73F8DAAE15A16D3200B4B2A5 /* iphonesimulator */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = iphoneos;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73F8DA7015A16BB100B4B2A5 /* Project object */;
+}
